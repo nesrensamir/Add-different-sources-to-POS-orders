@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<odoo>
+
+
+<record id='order_source_action' model='ir.actions.act_window'>
+<field name="name">Order Source</field>
+<field name="res_model">source</field>
+<field name="view_mode">tree,form</field>
+</record> 
+
+
+<menuitem name="Order Sources" id="order_source_menu"
+parent="point_of_sale.menu_point_config_product" action="order_source_action"/> 
+
+
+<record id="source_view_form" model="ir.ui.view">
+<field name="name">Order Source Form</field>
+<field name="model">source</field>
+<field name="arch" type="xml">
+<form>
+<group>
+<field name="sources"/>
+</group>
+</form>
+</field>
+</record> 
+
+
+
+<record id="source_view_tree" model="ir.ui.view">
+<field name="name">Order Source List</field>
+<field name="model">source</field>
+<field name="arch" type="xml">
+<tree>
+<field name="sources"/>
+</tree>
+</field>
+</record>
+
+
+
+
+
+</odoo>

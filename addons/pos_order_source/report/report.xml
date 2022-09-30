@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<record id="orderSource-Rebort" model="ir.actions.report">
+<field name="name">OrderSource Report</field>
+<field name="model">pos.order</field>
+<field name="report_type">qweb-pdf</field>
+<field name="report_name">source.order_report_template</field>
+<field name="report_file">source.order_report_template</field>
+<field name="binding_model_id" ref="model_pos_order"/>
+<field name="binding_type">report</field>
+</record>
+
+
+
+<menuitem name="Order Sources" id="order_source_report"
+parent="point_of_sale.menu_point_rep" action="orderSource-Rebort"/>  
+
+
+</odoo>

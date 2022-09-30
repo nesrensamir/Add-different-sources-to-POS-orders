@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<odoo>
+<template id="order_report_template"> 
+   <t t-call="web.html_container">
+       <t t-foreach="docs" t-as="doc">
+           <t t-call="web.internal_layout">
+               <div class="page">
+                <h1> Order Source Report </h1>
+                <h4><strong>Date</strong></h4>      
+                <table class="table text-center">
+                
+               
+                 <thead>
+                 <tr>
+                 <th>Source</th>
+                 <th>Order Count</th>
+                 <th>Total Amount</th>
+                 </tr>
+                 </thead>
+                 <tbody>
+                  
+
+                 </tbody>
+                
+                </table>
+                
+               </div>
+           </t>
+       </t>
+   </t>
+</template>
+</odoo>

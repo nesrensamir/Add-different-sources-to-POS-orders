@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<odoo>
+
+
+ 
+     <record id="pos-order-inherit" model="ir.ui.view" >
+      <field name="name">POS-Order-Source inherit</field>
+      <field name="model">pos.order</field>
+      <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+      <field name="arch" type="xml">
+      <xpath expr="//field[@name='user_id']" position="after">
+       <field name="source_id" widget="many2one"/>
+      </xpath>
+      </field>
+    </record>
+       
+      
+
+
+
+      <record id="pos-order-tree-inherit" model="ir.ui.view" >
+      <field name="name">POS-Order-Source tree inherit</field>
+      <field name="model">pos.order</field>
+      <field name="inherit_id" ref="point_of_sale.view_pos_order_tree"/>
+      <field name="arch" type="xml">
+      <xpath expr="//field[@name='user_id']" position="after">
+        <field name="source_id" widget="many2one" />
+      </xpath> 
+      
+      </field>
+    </record>
+      
+
+</odoo>
